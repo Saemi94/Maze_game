@@ -13,14 +13,18 @@ def checkbox(x,y):
         #movement = "N S"
 
 
+
 x = 1
 y = 1
 OnOff = False
 
+
 while OnOff:
+    choice = input() 
+    choice = choice.upper()
     if x == 1 and y == 1:
         print("You can travel: (N)orth.")
-        choice = input()
+        
         if choice == "N":
             y += 1
         else:
@@ -28,7 +32,7 @@ while OnOff:
 
     elif x == 1 and y == 2:
         print("You can  travel (N)orth, (S)outh, (E(ast. " )
-        choice = input()
+        
         if choice == "N":
             y += 1
         elif choice == "S":
@@ -40,7 +44,7 @@ while OnOff:
     
     elif x == 1 and y == 3:
         print("You can travel: (S)outh, and (E)ast. " )
-        choice = input()
+        
         if choice == "S":
             y -= 1
         elif choice == "E":
@@ -50,27 +54,48 @@ while OnOff:
 
     elif x == 2 and y == 1:
         print("You can travel: (N)" )
-        choice = input()
+        
         if choice == "N":
-            x += 1
+            y += 1
         else:
             print("Direction: Not a valid direction!")
 
-    if x == 2 and y == 2:
+    elif x == 2 and y == 2:
         print("You can travel: (S)outh, and (W)est. ")
-        choice = input()
+        
         if choice == "S":
             y -= 1
         elif choice == "W":
             x -= 1
         else:
             print("Direction: Not a valid direction!")
-    if x == 2 and y == 3:
+    elif x == 2 and y == 3:
         print("You can travel: (E)ast, and (W)est. ")
-        choice = input()
+        
         if choice == "E":
             x += 1
         elif choice == "W":
             x -= 1
         else:
             print("Direction: Not a valid direction!")
+    elif x == 3 and y == 1:
+        print("Direction: Victory!")
+        OnOff = False
+    elif x == 3 and y == 2:
+        print("Direction: (N)orth, (S)outh")
+        if choice == "N":
+            y += 1
+        elif choice == "S":
+            y -= 1
+    elif x == 3 and y == 3:
+        print("Direction: (W)est, (S)outh)")
+        if choice == "W":
+            x -= 1
+        elif choice == "S":
+            y -= 1
+
+
+
+
+
+    
